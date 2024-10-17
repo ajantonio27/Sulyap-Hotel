@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience luxurious facilities at our hotel, including a state-of-the-art gym, relaxing spa, and stunning swimming pool.">
+    <title>Facilities - Sulyap Hotel</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html">Main</a></li>
+                    <li><a href="accommodations.html">Accommodations</a></li>
+                    <li><a href="rates.html">Rooms and Rates</a></li>
+                    <li><a href="facilities.html" class="active">Facilities</a></li>
+                    <li><a href="contact.html">Book Now</a></li>
+                </ul>
+            </nav>
+           
+    </header>
+
+    <main class="container facilities">
+        <section class="facility">
+            <img src="gym.jpg" alt="State-of-the-art Gym" loading="lazy">
+            <div class="facility-content">
+                <h2>Elevate Your Fitness Routine</h2>
+                <p>Our state-of-the-art gym is more than just a workout space—it's an invitation to elevate your fitness journey. With the latest equipment and a variety of workout options, you'll find everything you need to stay active.</p>
+            </div>
+        </section>
+
+        <section class="facility">
+            <img src="spa.jpg" alt="Luxurious Spa for Relaxation" loading="lazy">
+            <div class="facility-content">
+                <h2>Indulge in Pure Bliss</h2>
+                <p>Our luxurious spa is your personal retreat for relaxation and rejuvenation. From soothing massages to revitalizing treatments, our skilled therapists provide a tailored experience just for you.</p>
+            </div>
+        </section>
+
+        <section class="facility">
+            <img src="pool.jpg" alt="Swimming Pool with Ocean Views" loading="lazy">
+            <div class="facility-content">
+                <h2>Dive Into Luxury</h2>
+                <p>Take a refreshing dip in our stunning swimming pool, surrounded by lush landscapes and ocean views. It's the perfect spot to unwind and enjoy ultimate relaxation.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>JRKS TUYO BALANGA BATAAN | <a href="mailto:sulyap_hotel@gmail.com">sulyap_hotel@gmail.com</a> | <a href="#">Contact</a> | <a href="#">Terms & Conditions</a></p>
+            <div class="social-media">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="newsletter">
+                <input type="email" placeholder="Enter your email address" aria-label="Email">
+                <button>Come to us</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector("button").addEventListener("click", function() {
+            const emailInput = document.querySelector('input[type="email"]');
+            const emailValue = emailInput.value;
+            if (!emailValue.includes("@") || !emailValue.includes(".")) {
+                alert("Please enter a valid email address.");
+            }
+        });
+    </script>
+</body>
+</html>

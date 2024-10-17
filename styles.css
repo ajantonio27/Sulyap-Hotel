@@ -1,0 +1,1030 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+.hero {
+    background: url('sulyapbg.jpg') no-repeat center center/cover;
+    height: 100vh; /* Full height of the viewport */
+    position: relative;
+    color: rgb(143, 156, 165);
+    text-align: center;
+    filter: brightness(2.4);
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text contrast */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 120px; /* Set logo width */
+    position: absolute; /* Position the logo absolutely */
+    top: 20px; /* Adjust from the top */
+    left: 20px; /* Adjust from the left */
+    filter: brightness(0.4); /* Adjusted brightness to match background */
+}
+
+/* Navigation Styling */
+.navbar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+}
+
+.navbar a {
+    text-decoration: none; /* Remove underlines */
+    color: black; /* Set text color to black */
+    font-family: 'Domine', serif; /* Apply Domine font */
+    font-weight: 700; /* Bold font */
+    font-size: 24px; /* Set font size */
+}
+
+.navbar a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
+    color: rgb(5, 16, 80);
+}
+
+/* Hero Text Styling */
+.hero {
+    position: relative; /* Positioning context for overlay */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    padding-left: 50px; /* Add space from the left edge */
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('sulyapbg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* WELCOME TO / SULYAP HOTELS Subtitle */
+.hero h1 {
+    font-family: "Microsoft Sans Serif", sans-serif; /* Apply Microsoft Sans Serif font */
+    font-size: 50px; /* Set font size for "WELCOME TO" */
+    font-weight: 400; /* Regular weight */
+    margin-bottom: 15px; /* Small space below */
+    letter-spacing: 3px; /* Add subtle spacing */
+    position: relative; /* Position relative */
+    text-align: center; /* Center-align the text */
+    color: #ffffff; /* Darker color for better contrast */
+}
+
+.hero h1 span {
+    font-family: "Microsoft Sans Serif", sans-serif; /* Apply Microsoft Sans Serif font */
+    font-size: 110px; /* Set font size for "SULYAP HOTELS" */
+    font-weight: 700; /* Bold weight for emphasis */
+    color: #ffffff; /* Strong color to highlight the name */
+    text-shadow: 1px 1px 2px rgba(255, 251, 251, 0.2); /* Subtle shadow for depth */
+}
+
+/* Tagline */
+.hero p {
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    font-size: 45px; /* Set font size for the tagline */
+    font-weight: 300; /* Light weight for a soft touch */
+    margin-top: 15px;
+    max-width: 800px; /* Constrain the width */
+    text-align: center; /* Center-align the text */
+    color: #555; /* Slightly lighter color for contrast */
+    line-height: 1.5; /* Improve line spacing for readability */
+}
+
+
+/* Responsive Styles */
+/* For screen widths between 768px and 1024px (Tablet Landscape) */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px; /* Slightly reduce padding */
+        flex-direction: row; /* Keep it in a row layout */
+        justify-content: center; /* Center the items */
+    }
+
+    .navbar ul {
+        gap: 25px; /* Adjust gap for better spacing on tablets */
+    }
+
+    .navbar a {
+        font-size: 20px; /* Slightly smaller font size for tablets */
+    }
+
+    .room-section {
+        padding: 30px 40px; /* Reduced padding for a better fit */
+    }
+
+    .room-card {
+        flex-direction: column; /* Stack elements vertically on tablets */
+        align-items: center; /* Center align for a more balanced look */
+    }
+
+    .room-info {
+        text-align: center; /* Center-align room info text */
+    }
+
+    .room-image img {
+        max-width: 90%; /* Adjust max-width for better display on tablets */
+    }
+}
+
+/* For screen widths 768px and below (Tablet Portrait and Mobile) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        padding: 10px 20px; /* Further reduce padding for mobile */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Column layout for mobile */
+        gap: 15px; /* Smaller gap for mobile */
+    }
+
+    .room-section {
+        padding: 20px; /* Reduce padding for mobile */
+    }
+
+    .room-card {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .room-info h3 {
+        font-size: 20px; /* Smaller font size for headers on mobile */
+    }
+
+    .room-info p {
+        font-size: 14px; /* Smaller paragraph font size on mobile */
+    }
+
+    .room-info button {
+        padding: 10px 20px; /* Adjust button size for mobile */
+    }
+
+    .room-image img {
+        max-width: 100%; /* Make the image take full width */
+    }
+}
+
+/* For very small screens (480px and below) */
+@media (max-width: 480px) {
+    .navbar a {
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+
+    .quote-section blockquote {
+        font-size: 24px; /* Smaller quote size on mobile */
+    }
+
+    .hero h1 {
+        font-size: 40px; /* Smaller heading size for very small screens */
+    }
+
+    .hero h1 span {
+        font-size: 80px; /* Smaller emphasis size */
+    }
+
+    .hero p {
+        font-size: 20px; /* Smaller paragraph size for very small screens */
+    }
+}
+
+
+
+/* accommodation */
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+    top: 15px; /* Position from the top */
+    right: 20px; /* Position from the right */
+    padding: 10px 20px; /* Padding around navbar */
+    border-radius: 8px; /* Rounded corners for navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.0); /* Shadow for depth */
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+.navbar ul {
+    list-style: none; /* No list style */
+    display: flex; /* Flex layout for horizontal alignment */
+    gap: 40px; /* Space between items */
+}
+
+.navbar a {
+    text-decoration: none; /* Remove underlines */
+    color: black; /* Set text color to black */
+    font-family: 'Domine', serif; /* Apply Domine font */
+    font-weight: 700; /* Bold font */
+    font-size: 28px; /* Increased font size for desktop */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.navbar a:hover {
+    color: rgb(21, 23, 156); /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Section containing the rooms */
+/* Room section */
+/* Room section */
+.room-section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Increased gap for better spacing */
+    padding: 150px 20px 20px; /* Padding adjusted to move section below the navbar */
+    align-items: center; /* Center align the section */
+}
+
+/* Each room card */
+.room-card {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align content */
+    gap: 20px; /* Gap between image and text */
+    background: #fff; /* White background for cards */
+    padding: 40px; /* Increased padding for a more spacious look */
+    border-radius: 12px; /* Slightly larger border radius */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for cards */
+    max-width: 900px; /* Set a larger maximum width for better readability */
+    margin: auto; /* Center the card horizontally */
+}
+
+/* Room image container */
+.room-image {
+    width: 100%; /* Full width for the image container */
+    margin-top: 40px; /* Add margin to move image lower */
+}
+
+/* Room image styling */
+.room-image img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 12px; /* Rounded corners */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* Room information */
+.room-info {
+    text-align: center; /* Center-align the text */
+    padding: 0 20px; /* Add some padding for better spacing */
+}
+
+/* Room info header */
+.room-info h3 {
+    font-weight: 700;
+    font-size: 30px; /* Slightly larger heading size */
+    margin-bottom: 10px; /* Adjusted margin */
+}
+
+/* Room info paragraph */
+.room-info p {
+    margin-bottom: 20px; /* Increased margin for better spacing */
+    font-size: 20px; /* Larger paragraph size */
+}
+
+/* Room info button styling */
+.room-info button {
+    background-color: #D4B67B;
+    border: none;
+    padding: 15px 30px; /* Increased button padding for a larger button */
+    font-size: 20px; /* Larger font size */
+    cursor: pointer;
+    color: #fff;
+    border-radius: 8px; /* Increased border radius */
+    transition: background-color 0.3s ease;
+}
+
+/* Room info button hover effect */
+.room-info button:hover {
+    background-color: #bfa069; /* Darker shade on hover */
+}
+
+/* Quote section styling */
+.quote-section {
+    background-color: #14274A;
+    color: #ffffff;
+    padding: 60px 20px; /* Increased padding for quote section */
+    text-align: center;
+    margin-top: 80px; /* Increased margin for spacing */
+}
+
+.quote-section blockquote {
+    font-size: 28px; /* Increased quote font size */
+    font-style: italic;
+    line-height: 1.6; /* Increased line height for better readability */
+}
+
+/* Responsive Design */
+
+/* Tablet (widths between 768px and 1024px) */
+@media (max-width: 1024px) {
+    .room-section {
+        padding: 120px 20px 20px; /* Adjust padding for tablet */
+    }
+
+    .room-card {
+        max-width: 90%; /* Reduce maximum width */
+    }
+
+    .room-info h3 {
+        font-size: 26px; /* Adjust heading size for tablets */
+    }
+
+    .room-info p {
+        font-size: 18px; /* Adjust paragraph size */
+    }
+}
+
+/* Mobile (widths 768px and below) */
+@media (max-width: 768px) {
+    .room-card {
+        max-width: 100%; /* Full width for mobile */
+    }
+
+    .room-image {
+        max-width: 100%; /* Ensure the image takes the full width */
+    }
+
+    .room-info h3 {
+        font-size: 22px; /* Adjust heading size */
+    }
+
+    .room-info p {
+        font-size: 16px; /* Adjust paragraph size */
+    }
+
+    .room-info button {
+        padding: 12px 25px; /* Adjust button padding */
+        font-size: 16px; /* Adjust button font size */
+    }
+}
+
+/* Small mobile (widths 480px and below) */
+@media (max-width: 480px) {
+    .room-section {
+        padding: 100px 10px 20px; /* Further reduce padding for small screens */
+    }
+
+    .room-info h3 {
+        font-size: 20px; /* Adjust heading size */
+    }
+
+    .room-info p {
+        font-size: 14px; /* Adjust paragraph size */
+    }
+
+    .room-info button {
+        font-size: 14px; /* Adjust button font size */
+    }
+}
+
+
+/* Facilities*/
+
+
+body {
+    font-family: 'Poppins', sans-serif; /* Updated font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Navigation Styles */
+.navigation {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.navigation li {
+    margin: 0 15px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #080707;
+    font-size: 25px; /* Font size for navigation */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
+    color: rgb(21, 23, 156);
+}
+
+.navbar a.active {
+    color: rgb(21, 23, 156); /* Active link color */
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* Facility Section */
+.facility {
+    margin: 30px 0;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.facility img {
+    width: 100%; /* Full width for better responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 500px; /* Maximum width to limit size */
+    border-radius: 8px;
+}
+
+.facility-content {
+    width: 50%;
+}
+
+/* Footer */
+.footer {
+    background-color: #002147;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 30px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.footer button {
+    padding: 10px 20px;
+    background-color: #ffb400;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.footer button:hover {
+    background-color: #e6a500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    /* Tablets */
+    .facility {
+        flex-direction: column;
+        text-align: center;
+    }
+    .facility img {
+        width: 90%; /* Adjust image width for tablets */
+        max-width: none; /* Remove max width for flexibility */
+    }
+    .facility-content {
+        width: 100%; /* Make content take full width */
+    }
+    .navigation {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile Devices */
+    .container {
+        width: 95%;
+    }
+    .facility {
+        margin: 20px 0;
+        flex-direction: column;
+        text-align: center;
+    }
+    .facility img {
+        width: 100%; /* Full width for mobile */
+    }
+    .facility-content {
+        width: 100%; /* Make content take full width */
+    }
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navigation li {
+        margin: 10px 0;
+    }
+    header {
+        padding: 20px 0;
+    }
+}
+
+ /* Rooms Rates */
+ /* Global Reset and Default Styling */
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make sure the body and html take up the full height */
+html, body {
+    height: 100%;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    padding: 10px 20px; /* Padding around navbar */
+    border-radius: 8px; /* Rounded corners for navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    z-index: 1000;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Domine', serif;
+    font-weight: 700;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.navbar a.active {
+    color: rgb(21, 23, 156);
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: rgb(5, 16, 80);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    position: relative;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text h1 {
+    font-family: "Microsoft Sans Serif", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+
+/* Room Section */
+.room-section {
+    padding: 20px;
+}
+
+.room-card {
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.room-image img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Increase font size for room titles and details */
+.room-info h3 {
+    font-size: 32px; /* Increase room title size */
+    font-weight: 700; /* Make it bold */
+}
+
+.room-info p {
+    font-size: 22px; /* Increase paragraph size */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .navbar {
+        top: 10px; /* Adjust navbar position for tablets */
+        right: 10px; /* Adjust spacing */
+        padding: 10px 15px; /* Adjust navbar padding */
+    }
+
+    .navbar a {
+        font-size: 22px; /* Adjust font size for tablets */
+    }
+
+    .room-section {
+        padding: 100px 20px; /* Adjust padding for room section */
+    }
+
+    .room-card {
+        flex-direction: column; /* Stack cards on smaller screens */
+        align-items: center; /* Center align content */
+    }
+
+    .room-image img {
+        width: 80%; /* Adjust image width for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Keep navbar items horizontal */
+        justify-content: center; /* Center align items */
+    }
+
+    .navbar ul {
+        gap: 15px; /* Reduce gap between navbar items */
+    }
+
+    .room-section {
+        padding: 80px 20px 20px; /* Adjust padding for room section */
+    }
+
+    .room-card {
+        flex-direction: column; /* Stack cards */
+        align-items: flex-start; /* Align items to start */
+        text-align: left; /* Left align text */
+    }
+
+    .room-info h3 {
+        font-size: 28px; /* Adjust heading size */
+    }
+
+    .room-info p {
+        font-size: 20px; /* Adjust paragraph size */
+    }
+
+    .room-image img {
+        width: 100%; /* Make the image take full width */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px; /* Adjust padding for small screens */
+    }
+
+    .navbar a {
+        font-size: 18px; /* Adjust font size for navbar items */
+    }
+
+    .room-section {
+        padding: 60px 10px; /* Further reduce padding for small screens */
+    }
+
+    .room-info h3 {
+        font-size: 24px; /* Adjust heading size for very small screens */
+    }
+
+    .room-info p {
+        font-size: 18px; /* Adjust paragraph size for very small screens */
+    }
+}
+/* Acontact  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #14274A;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: relative;
+}
+
+header .navigation {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header .navigation li {
+    margin: 0 15px;
+}
+
+header .navigation a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+header .navigation .active {
+    font-weight: bold;
+    border-bottom: 2px solid #f8c24f;
+}
+
+/* Main Content */
+main {
+    padding: 2rem 0;
+}
+
+/* Contact Section */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.contact-info,
+.contact-form {
+    width: 48%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5rem;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.contact-form button {
+    margin-top: 15px;
+    padding: 0.75rem;
+    background-color: #f8c24f;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Facility Section */
+.facility {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.facility-content {
+    width: 48%;
+}
+
+/* Footer */
+.footer {
+    background-color: #14274A; /* Corrected color code with # */
+    color: #fff;
+    padding: 9%; /* 1rem can be adjusted as needed */
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .social-media,
+.footer .newsletter {
+    margin-top: 1rem;
+}
+
+.footer a {
+    color: #f8c24f;
+    text-decoration: none;
+}
+
+.footer .newsletter input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: calc(100% - 100px);
+}
+
+.footer .newsletter button {
+    padding: 0.5rem;
+    background-color: #f8c24f;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .contact-content,
+    .facility {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info,
+    .contact-form,
+    .facility-content {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .navigation {
+        flex-direction: column;
+    }
+
+    header .navigation li {
+        margin: 10px 0;
+    }
+
+    .contact-content,
+    .facility img {
+        order: 2; /* Ensures the image appears before the content on smaller screens */
+    }
+
+    .facility-content {
+        order: 1;
+    }
+
+    .footer .container {
+        flex-direction: column;
+    }
+
+    .footer .newsletter input {
+        width: calc(100% - 50px);
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+    }
+
+    .footer .newsletter input {
+        width: calc(100% - 80px);
+    }
+
+    .footer .newsletter button {
+        width: 60px;
+    }
+}
+
+/* Burger menu styles */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute; /* Positioning it absolutely within the header */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    margin: 4px 0;
+}
+
+/* Mobile responsive styling */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+    
+    .navbar {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+}
+
+.social-media a {
+    margin: 0 10px; /* Add space between icons */
+    color: #ffffff; /* Set color for icons */
+    font-size: 24px; /* Adjust size of the icons */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.social-media a:hover {
+    color: #000000; /* Change color on hover */
+}
